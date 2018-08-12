@@ -21,3 +21,8 @@ class User(Base):
 
 class Post(Base):
 	__tablename__ = "Posts"
+	post_id = Column(Integer, primary_key = True)
+	title = Column(String)
+	description = Column(String)
+	def __repr__(self):
+		return ("Post title: {}, Post description: {}".format(self.title, self.description)
