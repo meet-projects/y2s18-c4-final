@@ -1,7 +1,17 @@
-* {
-    /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+.logininfo { 
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+  
 }
 
-/* Put your styles BELOW this line */
+.signup1 { 
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+  
+}
