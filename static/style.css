@@ -1,4 +1,22 @@
+.logininfo { 
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+  
+}
+
+.signup1 { 
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+  
+}
 body{
+
     background-color: rgba(170, 155, 132, 0.123)
 }
 .LF {
