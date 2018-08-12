@@ -13,8 +13,6 @@ app = Flask(__name__)
 def loginpage():
     if request.method == 'POST':
         user = databases.query_by_name(request.form["name"])
-    
-
         if user is not None:
             if user.password == request.form["password"]:
                 return redirect(url_for("profilepage"))
@@ -41,7 +39,7 @@ def profilepage():
 @app.route('/signup', methods['GET' , 'POST'])
 def signuppage():
     if request.method == 'GET':
-        return render_template(signup.html)
+        return render_template("signup.html")
     else:
         name= request.form['thename']
         password = request.form['thepassword']
@@ -49,7 +47,7 @@ def signuppage():
 
         
         databases.add_user(name , password, 0 )
-        return render_template(loginpage)
+        return render_template("home.html")
 
         
 
