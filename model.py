@@ -14,6 +14,7 @@ class User(Base):
 	name = Column(String)
 	password = Column(String)
 	points = Column(Integer)
+	number = Column(String)
 	#picture = Column(String)
 
 	def __repr__(self):
