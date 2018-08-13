@@ -50,6 +50,20 @@ def sign_up_page():
         databases.add_user(name , password, 0)
         return render_template("home.html")
 
+@app.route('/categories')
+def categories():
+    return render_template("categories.html")
+
+@app.route('/phones')
+def phones():
+    return render_template("phones.html")
+@app.route('/bags')
+def bags():
+    return render_template("bags.html")
+@app.route('/other')
+def other():
+    return render_template("other.html")
+
 # @app.route('/search', methods['GET', 'POST'])
 # def search():
 
