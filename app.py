@@ -9,10 +9,11 @@ import databases
 app = Flask(__name__)
 
 # App routing code here
-@app.route('/lognin' , methods=['GET','POST'])
-def loginpage():
+@app.route('/' , methods=['GET','POST'])
+def login_page():
     if request.method == 'POST':
         user = databases.query_by_name(request.form["name"])
+        print(request.form['name'])
         if user is not None:
             if user.password == request.form["password"]:
                 return redirect(url_for("profilepage"))
@@ -33,24 +34,24 @@ def loginpage():
 # Running the Flask app
 
 @app.route('/profile')
-def profilepage():
+def profile_page():
     pass
 
-@app.route('/signup', methods['GET' , 'POST'])
-def signuppage():
+@app.route('/signup', methods=['GET' ,'POST'])
+def sign_up_page():
     if request.method == 'GET':
-        return render_template(signup.html)
+        return render_template("signup.html")
     else:
-        name= request.form['thename']
-        password = request.form['thepassword']
+        name = request.form['name']
+        password = request.form['password']
 
 
         
-        databases.add_user(name , password, 0 )
-        return render_template(profile.html)
+        databases.add_user(name , password, 0)
+        return render_template("home.html")
 
-        
-
+# @app.route('/search', methods['GET', 'POST'])
+# def search():
 
     
 if __name__ == "__main__":

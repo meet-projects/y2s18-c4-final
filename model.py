@@ -17,12 +17,13 @@ class User(Base):
 	#picture = Column(String)
 
 	def __repr__(self):
-		return ("user name: {}, user pass:{}, user points:{}".format(self.name, self.password, self.points))
+		return ("user name:{}, user pass:{}, user points:{}".format(self.name, self.password, self.points))
 
 class Post(Base):
-	__tablename__ = "Posts"
+	__tablename__ = "posts"
 	post_id = Column(Integer, primary_key = True)
 	title = Column(String)
 	description = Column(String)
+
 	def __repr__(self):
-		return ("Post title: {}, Post description: {}".format(self.title, self.description)
+		return ("Post title: {}, Post description: {}".format(self.title, self.description))
