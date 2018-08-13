@@ -27,7 +27,7 @@
 
 body{
 
-    background-color: rgba(216, 173, 109, 0.123)
+    background-color: blue; /*rgba(216, 173, 109, 0.123)*/
 }
 .LF {
     position: fixed;
