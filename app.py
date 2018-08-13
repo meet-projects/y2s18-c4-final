@@ -72,6 +72,17 @@ def bags():
 @app.route('/other')
 def other():
     return render_template("other.html")
+@app.route('/post' , methods=['GET' ,'POST'])
+# def makepost():
+#     if request.method == 'GET':
+#         return render_template('makepost.html')
+#     else:
+#         describe = request.form['describe']
+#         category = request.form['category']
+
+#         database.makepost()
+
+    
 
 # @app.route('/search', methods['GET', 'POST'])
 # def search():
