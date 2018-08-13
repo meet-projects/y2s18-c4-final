@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-<form>
-    <head>
-        <title>My Final Project</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>    
-    <div class="LF">
-            <input type="radio" name="LF" value="radio">Lost
-            <input type="radio" name="LF" value="radio">Found
-        </div>
+<head>
+    <title>My Final Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form>    
         <div class="submit">
-            <input type="submit" name="submit">
+            <button type="submit" value="Submit">Lost</button>
+            <button type="reset" value="Reset">Found</button>
         </div>
 
-</form>
+    </form>
 
 </body>
 </html>

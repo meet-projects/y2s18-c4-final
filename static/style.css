@@ -26,10 +26,18 @@ body{
     transform: translate(-50%, -50%);}
 .submit{
     position: fixed;
-    left: 48%;
-    top: 53%}
-.h1{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);}
+.thanks{
     position: fixed;
     left: 50%;
-    transform: translate(-50%, -50%);}
-    
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.home{
+    position: fixed;
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%, -50%);
+}
