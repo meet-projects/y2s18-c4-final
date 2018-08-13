@@ -2,11 +2,14 @@
     <html>
         <body>
             <h1> CATEGORIES:</h1>
-            <a href="http://127.0.0.1:5000/phones"> go to phones category</a>
+            <a href="{{ url_for('phones') }}">
+    PHONES </a>
+
             <br>
-            <a href="http://127.0.0.1:5000/bags"> go to the bags category</a>
+            <a href="{{ url_for('bags')}}"> BAGS</a>
             <br>
-            <a href="http://127.0.0.1:5000/other"> go to other category</a>
+            <a href="{{url_for('others')}}"> OTHER</a>
+            
 
 
         </body>
