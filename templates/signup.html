@@ -9,18 +9,20 @@
 <body>
     <div class="singup1">
             <h1> SIGN UP</h1>
-            <form action="/signup" placeholder="sign up!">
+            <form action="/signup" placeholder="sign up!" method="post">
             <input type="text" name="name" placeholder="enter full name">
+            <br>
+            <input type="text" name="phonenum" placeholder="enter your phone number">
             <br>
             <input type="password" name="password" placeholder="enter password">
             <br>
             <form action = "/signup">
-            <input type="submit" value="submit" class="btn btn-outline-dark">
+            <input class="btn btn-outline-dark" type="submit" value="submit">
             </form>
     </div>
 
     <script src="{{ url_for('static', filename='jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script> 
 
 </body>
 </html>
