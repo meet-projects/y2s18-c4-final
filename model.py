@@ -9,19 +9,19 @@ Base = declarative_base()
 
 # Example code:
 class User(Base):
-	__tablename__ = "users"
+	__tablename__ = "Users1"
 	user_id = Column(Integer, primary_key = True)
 	name = Column(String)
 	password = Column(String)
 	points = Column(Integer)
-	number = Column(String)
+	phone_number = Column(String)
 	#picture = Column(String)
 
 	def __repr__(self):
 		return ("user name:{}, user pass:{}, user points:{}".format(self.name, self.password, self.points))
 
 class Post(Base):
-	__tablename__ = "posts"
+	__tablename__ = "Posts1"
 	post_id = Column(Integer, primary_key = True)
 	title = Column(String)
 	description = Column(String)
