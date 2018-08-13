@@ -27,18 +27,16 @@
 
 body{
 
-    background-color: blue; /*rgba(216, 173, 109, 0.123)*/
+    
+   
+    
 }
 .LF {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);}
-.submit{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);}
+
 .thanks{
     position: fixed;
     left: 50%;
@@ -49,16 +47,16 @@ body{
     position: fixed;
     left: 50%;
     top: 57%;
-    transform: translate(-50%, -50%);
-}
+    transform: translate(-50%, -50%);}
+.submit{
+position: fixed;
+left: 50%;
+top: 60%;
+width: 250px;
+height: 300px;
+transform: translate(-50%, -50%);}
 .bg {
-    /* The image used */
-    background-image: url("download(1).jpeg");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
+    background-image: url("aa.jpg");
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%}
