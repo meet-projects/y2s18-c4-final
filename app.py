@@ -81,7 +81,7 @@ def lostorfound():
 def other():
     return render_template("other.html")
 @app.route('/post' , methods=['GET' ,'POST'])
- def makepost():
+def makepost():
      if request.method == 'GET':
          return render_template('makepost.html')
      else:
