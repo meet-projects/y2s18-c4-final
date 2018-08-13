@@ -49,6 +49,10 @@ def sign_up_page():
         
         databases.add_user(name , password, 0)
         return render_template("home.html")
+@app.route('/noor', methods=['GET' ,'POST'])
+def noor():
+    if request.method == 'GET':
+        return render_template("noor.html")
 
 # @app.route('/search', methods['GET', 'POST'])
 # def search():
