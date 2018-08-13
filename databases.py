@@ -39,7 +39,7 @@ def query_all_posts():
 
 def query_by_name(name):
 
-	return session.query(User).filter_by(name = name).all()
+	return session.query(User).filter_by(name = name).first()
 
 def query_by_title(title):
 
