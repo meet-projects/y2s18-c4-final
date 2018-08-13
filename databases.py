@@ -22,10 +22,10 @@ def add_user(name, password, points):
 	session.add(user)
 	session.commit()
 
-def add_post(title, description):
+def add_post(title, description, category):
 
 	print("Added a post!")
-	post = Post(title = title, description = description)
+	post = Post(title = title, description = description, category = category)
 	session.add(post)
 	session.commit()
 
@@ -54,6 +54,9 @@ def delete_all_posts():
 	
 	session.query(Posts).delete()
 	session.commit()
+
+def query_by_category(category):
+	return session.query(Post).filter_by(category = category).all()
 
 def delete_duplicates():
 
