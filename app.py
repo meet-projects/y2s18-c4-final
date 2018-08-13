@@ -16,7 +16,7 @@ def login_page():
         print(request.form['name'])
         if user is not None:
             if user.password == request.form["password"]:
-                return redirect(url_for("profilepage"))
+                return redirect(url_for("profile_page", username = user.name))
 
             else:
                 error = 'password does not match'
@@ -33,9 +33,12 @@ def login_page():
 
 # Running the Flask app
 
-@app.route('/profile')
-def profile_page():
-    pass
+@app.route('/profile/<string:username>')
+def profile_page(username):
+
+    user = databases.query_by_name(username)
+    if user is not None:
+        return render_template('profile.html', user = user)
 
 @app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
@@ -44,11 +47,12 @@ def sign_up_page():
     else:
         name = request.form['name']
         password = request.form['password']
+        number = request.form['phonenum']
 
-
+        print("hthr")
         
-        databases.add_user(name , password, 0)
-        return redirect(url_for("noor.html"))
+        databases.add_user(name , password, 0 , number)
+        return redirect(url_for("login_page"))
 @app.route('/noor', methods=['GET' ,'POST'])
 def noor():
     if request.method == 'GET':
@@ -68,15 +72,17 @@ def profile():
 
 @app.route('/categories/phones')
 def phones():
-    phoneposts = database.query_by_category("phones")
+    phoneposts = databases.query_by_category("phones")
     return render_template("phones.html",phones =phoneposts )
 
 @app.route('/bags')
 def bags():
     return render_template("bags.html")
-@app.route('/lostorfound')
+@app.route('/lostorfound' , methods=['POST','GET'])
 def lostorfound():
     return render_template('noor.html')
+
+
 @app.route('/other')
 def other():
     return render_template("other.html")
@@ -89,7 +95,7 @@ def makepost():
          category = request.form['category']
          title = request.form['title']
 
-         database.add_post(title,describe,category)
+         databases.add_post(title,describe,category)
          return redirect(url_for("profile"))
 
 
