@@ -1,9 +1,17 @@
-<form>
-        <div class="LF">
-            <input type="radio" name="LF" value="radio">Lost
-            <input type="radio" name="LF" value="radio">Found
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Final Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form>    
         <div class="submit">
-            <input type="submit" name="Continue">
+            <button type="submit" value="Submit">Lost</button>
+            <button type="reset" value="Reset">Found</button>
         </div>
+
     </form>
+
+</body>
+</html>
