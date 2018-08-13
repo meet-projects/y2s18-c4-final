@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Booleana
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
@@ -14,6 +14,7 @@ class User(Base):
 	name = Column(String)
 	password = Column(String)
 	points = Column(Integer)
+	number = Column(String)
 	#picture = Column(String)
 
 	def __repr__(self):
