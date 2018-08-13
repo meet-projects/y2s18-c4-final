@@ -15,10 +15,10 @@ session = DBSession()
 # Your database functions are located under here (querying, adding items, etc.)
 
 # Example of adding a student:
-def add_user(name, password, points, number):
+def add_user(name, password, points, phone_number):
 	
 	print("Added a user!")
-	user = User(name = name, password = password, points = points, number = number)
+	user = User(name = name, password = password, points = points, phone_number = phone_number)
 	session.add(user)
 	session.commit()
 
@@ -39,7 +39,7 @@ def query_all_posts():
 
 def query_by_name(name):
 
-	return session.query(User).filter_by(name = name).all()
+	return session.query(User).filter_by(name = name).first()
 
 def query_by_title(title):
 
