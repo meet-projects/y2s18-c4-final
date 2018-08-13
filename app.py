@@ -9,7 +9,7 @@ import databases
 app = Flask(__name__)
 
 # App routing code here
-@app.route('/' , methods=['GET','POST'])
+@app.route('/' , methods = ['GET','POST'])
 def login_page():
     if request.method == 'POST':
         user = databases.query_by_name(request.form["name"])
@@ -20,11 +20,11 @@ def login_page():
 
             else:
                 error = 'password does not match'
-                return render_template('home.html', error=error)
+                return render_template('home.html', error = error)
         else:
 
             error = 'username does not exist'
-            return render_template('home.html', error=error)
+            return render_template('home.html', error = error)
 
     else:
 
@@ -37,7 +37,7 @@ def login_page():
 def profile_page():
     pass
 
-@app.route('/signup', methods=['GET' ,'POST'])
+@app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
     if request.method == 'GET':
         return render_template("signup.html")

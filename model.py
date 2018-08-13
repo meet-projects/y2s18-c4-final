@@ -24,6 +24,6 @@ class Post(Base):
 	post_id = Column(Integer, primary_key = True)
 	title = Column(String)
 	description = Column(String)
-
+	# found_things = Column(List)
 	def __repr__(self):
 		return ("Post title: {}, Post description: {}".format(self.title, self.description))
