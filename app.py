@@ -9,7 +9,7 @@ import databases
 app = Flask(__name__)
 
 # App routing code here
-@app.route('/' , methods=['GET','POST'])
+@app.route('/' , methods = ['GET','POST'])
 def login_page():
     if request.method == 'POST':
         user = databases.query_by_name(request.form["name"])
@@ -20,11 +20,11 @@ def login_page():
 
             else:
                 error = 'password does not match'
-                return render_template('home.html', error=error)
+                return render_template('home.html', error = error)
         else:
 
             error = 'username does not exist'
-            return render_template('home.html', error=error)
+            return render_template('home.html', error = error)
 
     else:
 
@@ -37,7 +37,7 @@ def login_page():
 def profile_page():
     pass
 
-@app.route('/signup', methods=['GET' ,'POST'])
+@app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
     if request.method == 'GET':
         return render_template("signup.html")
@@ -53,6 +53,25 @@ def sign_up_page():
 def noor():
     if request.method == 'GET':
         return render_template("noor.html")
+@app.route('/thank_you', methods=['GET' ,'POST'])
+def thanks():
+    if request.method == 'GET':
+        return render_template("thank_you.html")
+
+
+@app.route('/categories')
+def categories():
+    return render_template("categories.html")
+
+@app.route('/phones')
+def phones():
+    return render_template("phones.html")
+@app.route('/bags')
+def bags():
+    return render_template("bags.html")
+@app.route('/other')
+def other():
+    return render_template("other.html")
 
 # @app.route('/search', methods['GET', 'POST'])
 # def search():
