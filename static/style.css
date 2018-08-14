@@ -4,6 +4,7 @@
     left: 500px;
     width: 150px;
     height: 100%;
+    
   
 }
 
@@ -13,6 +14,7 @@
     left: 500px;
     width: 150px;
     height: 100%;
+    
   
 }
 
@@ -26,6 +28,7 @@
   }
 
 body{
+
 }
 .mov{
 	color:white;
@@ -89,6 +92,7 @@ body{
     left: 500px;
     width: 150px;
     height: 100%;
+    font-size: 1.6rem;
 
 }
 
