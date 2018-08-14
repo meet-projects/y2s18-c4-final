@@ -26,6 +26,7 @@
   }
 
 body{
+
    
     
 }
@@ -58,3 +59,14 @@ transform: translate(-50%, -50%);}
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100%}
+.whit{
+	color:white;
+}
+.profilecss{
+	position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+
+}
