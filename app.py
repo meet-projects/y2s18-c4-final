@@ -61,10 +61,7 @@ def sign_up_page():
 def noor():
     if request.method == 'GET':
         return render_template("noor.html")
-@app.route('/thank_you', methods=['GET' ,'POST'])
-def thanks():
-    if request.method == 'GET':
-        return render_template("thank_you.html")
+
 
 
 @app.route('/categories')
