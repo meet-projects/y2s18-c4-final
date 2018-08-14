@@ -41,6 +41,8 @@ def profile_page(username):
     user = databases.query_by_name(username)
     if user is not None:
         return render_template('profile.html', user = user)
+    else:
+        return redirect(url_for('login_page'))
 
 @app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
@@ -96,6 +98,7 @@ def makepost():
          title = request.form['title']
 
          databases.add_post(title,describe,category)
+
 
          return redirect(url_for("profile_page", username = session['username']))
 
