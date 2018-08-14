@@ -79,7 +79,8 @@ def phones():
 
 @app.route('/bags')
 def bags():
-    return render_template("bags.html")
+    bagsposts = databases.query_by_category("bags")
+    return render_template("bags.html",bags =bagsposts)
 @app.route('/lostorfound' , methods=['POST','GET'])
 def lostorfound():
     return render_template('noor.html')
@@ -87,7 +88,8 @@ def lostorfound():
 
 @app.route('/other')
 def other():
-    return render_template("other.html")
+    otherposts = databases.query_by_category("other")
+    return render_template("other.html" ,otherposts =others)
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
      if request.method == 'GET':
