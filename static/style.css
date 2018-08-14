@@ -26,6 +26,18 @@
   }
 
 body{
+}
+.mov{
+	color:white;
+	/*position: fixed;
+	transform: translate(-50%, -50%);*/
+
+    position: relative;
+	top: 7px;
+    left: 60px;
+
+}
+}
 
    
     
@@ -62,6 +74,9 @@ transform: translate(-50%, -50%);}
 .whit{
 	color:white;
 }
+
+
+
 .profilecss{
 	position: relative;
     top: 200px;
@@ -70,3 +85,4 @@ transform: translate(-50%, -50%);}
     height: 100%;
 
 }
+
