@@ -3,17 +3,17 @@
 	<head>
 		<title>{{user.name}}'s profile</title>
 	</head>
-	<body>
+	<body class="bg" class="profilecss">
 		<h1>{{user.name}}</h1>
 		<p>{{user.points}}</p>
 		<form action = "/categories">
-			<input type = "submit" value = "categories">
+			<input class="btn btn-outline-dark" type = "submit" value = "categories">
 		</form>
 		<form action = "/lostorfound">
-			<input type = "submit" value = "Lost//found">
+			<input class="btn btn-outline-dark" type = "submit" value = "Lost//found">
 		</form>
 		<form action = "/chat/{{user.name}}>">
-			<input type = "submit" value = "Chat">
+			<input class="btn btn-outline-dark" type = "submit" value = "Chat">
 		</form>
 
 	</body>
