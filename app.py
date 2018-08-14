@@ -66,9 +66,7 @@ def thanks():
 @app.route('/categories')
 def categories():
     return render_template("categories.html")
-@app.route('/profile')
-def profile():
-    return render_template('profile.html')
+
 
 @app.route('/categories/phones')
 def phones():
@@ -86,7 +84,7 @@ def lostorfound():
 @app.route('/other')
 def other():
     return render_template("other.html")
-@app.route('/post' , methods=['GET' ,'POST'])
+@app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
      if request.method == 'GET':
          return render_template('makepost.html')
@@ -96,7 +94,8 @@ def makepost():
          title = request.form['title']
 
          databases.add_post(title,describe,category)
-         return redirect(url_for("profile"))
+
+         return redirect(url_for("profile_page"))
 
 
     
