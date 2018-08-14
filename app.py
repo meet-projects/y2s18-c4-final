@@ -42,7 +42,7 @@ def profile_page(username):
     if user is not None:
         return render_template('profile.html', user = user)
     else:
-        return redirect(url_for('slogin_page'))
+        return redirect(url_for('login_page'))
 
 @app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
@@ -93,6 +93,35 @@ def other():
 @app.route('/thanyou')
 def thanku():
     return render_template("thank_you.html")
+@app.route('/sunglasses')
+def sunglasses():
+    sunglassesposts = databases.query_by_category("sunglasses")
+    return render_template("other.html" ,sunglasses = sunglassesposts)
+
+@app.route('/wallets')
+def wallets():
+    walletsposts = databases.query_by_category("wallets")
+    return render_template("wallets.html",wallets = walletsposts)
+@app.route('/books')
+def books():
+    booksposts = databases.query_by_category("books")
+    return render_template("books.html" , books=booksposts)
+@app.route('/keys')
+def keys():
+    keysposts = databases.query_by_category('keys')
+    return render_template("keys.html", keys=keysposts)
+@app.route('/clothes')
+def clothes():
+    clothesposts = databases.query_by_category("clothes")
+    return render_template("clothes.html", clothes=clothesposts)
+@app.route('/jewerly')
+def jewerly():
+    jewerlyposts = databases.query_by_category("jewerly")
+    return render_template("jewerly.html",jewerlyposts=jewerly)
+    
+    
+
+    
     
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
