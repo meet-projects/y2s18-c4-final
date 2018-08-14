@@ -90,6 +90,10 @@ def lostorfound():
 def other():
     otherposts = databases.query_by_category("other")
     return render_template("other.html" ,others = otherposts)
+@app.route('/thanyou')
+def thanku():
+    return render_template("thank_you.html")
+    
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
      if request.method == 'GET':
@@ -102,9 +106,10 @@ def makepost():
          username = request.form['username']
 
          databases.add_post(title,describe,category,username,contact)
+         return redirect(url_for('thanku'))
 
 
-         return redirect(url_for("profile_page", username = session['username']))
+         #return redirect(url_for("profile_page", username = session['username']))
 
 
     
