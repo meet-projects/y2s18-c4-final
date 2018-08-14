@@ -26,6 +26,7 @@ class Post(Base):
 	title = Column(String)
 	description = Column(String)
 	category = Column(String)
+	username = Column(String)
 	contact = Column(String)
 	# found_things = Column(List)
 	def __repr__(self):
