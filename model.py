@@ -18,7 +18,7 @@ class User(Base):
 	#picture = Column(String)
 
 	def __repr__(self):
-		return ("user name:{}, user pass:{}, user points:{}".format(self.name, self.password, self.points))
+		return ("user name:{}, user pass:{}, user points:{}, user phone: {}".format(self.name, self.password, self.points, self.phone_number))
 
 class Post(Base):
 	__tablename__ = "Posts1"
@@ -26,6 +26,8 @@ class Post(Base):
 	title = Column(String)
 	description = Column(String)
 	category = Column(String)
+	username = Column(String)
+	contact = Column(String)
 	# found_things = Column(List)
 	def __repr__(self):
-		return ("Post title: {}, Post description: {}".format(self.title, self.description))
+		return ("Post title: {}, Post description: {}, Post category: {}".format(self.title, self.description, self.category))

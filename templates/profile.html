@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{user.name}}'s profile</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+
+		<title class="whit">{{user.name}}'s profile</title>
 	</head>
 	<body class="bg profilecss">
 		<h1>{{user.name}}</h1>
-		<p>{{user.points}}</p>
+		<p class="whit"> your points:{{user.points}}</p>
 		<form action = "/categories">
 			<input class="btn btn-outline-dark" type = "submit" value = "categories">
 		</form>
@@ -15,6 +20,9 @@
 		<form action = "/chat/{{user.name}}>">
 			<input class="btn btn-outline-dark" type = "submit" value = "Chat">
 		</form>
-
+		<form action = "/profile">
+		</form>
+		<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+      	<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 	</body>
 </html>
