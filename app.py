@@ -30,7 +30,7 @@ def login_page():
 
     else:
 
-        return render_template('home.html')
+        return render_template('navbar.html')
 
 
 # Running the Flask app
