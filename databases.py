@@ -22,10 +22,10 @@ def add_user(name, password, points, phone_number):
 	session.add(user)
 	session.commit()
 
-def add_post(title, description, category):
+def add_post(title, description, category, username, contact):
 
 	print("Added a post!")
-	post = Post(title = title, description = description, category = category)
+	post = Post(title = title, description = description, category = category, username = username, contact = contact)
 	session.add(post)
 	session.commit()
 
