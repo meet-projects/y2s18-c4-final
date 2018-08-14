@@ -7,6 +7,7 @@ import databases
 
 # Starting the flask app
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '34gsss7s'
 
 # App routing code here
 @app.route('/' , methods = ['GET','POST'])
@@ -16,6 +17,7 @@ def login_page():
         print(request.form['name'])
         if user is not None:
             if user.password == request.form["password"]:
+                session['username'] = user.name
                 return redirect(url_for("profile_page", username = user.name))
 
             else:
@@ -95,7 +97,7 @@ def makepost():
 
          databases.add_post(title,describe,category)
 
-         return redirect(url_for("profile_page"))
+         return redirect(url_for("profile_page", username = session['username']))
 
 
     
