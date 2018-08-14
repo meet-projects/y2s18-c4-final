@@ -89,7 +89,7 @@ def lostorfound():
 @app.route('/other')
 def other():
     otherposts = databases.query_by_category("other")
-    return render_template("other.html" ,otherposts =others)
+    return render_template("other.html" ,others = otherposts)
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
      if request.method == 'GET':
