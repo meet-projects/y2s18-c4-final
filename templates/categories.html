@@ -1,27 +1,29 @@
 <!doctype html>
     <html>
-        <body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+        <body class="bg">
             <h1> CATEGORIES:</h1>
-            <a href="{{ url_for('phones') }}">
-    PHONES </a>
-
+        <div class="color"></div>
+            <a href="{{ url_for('phones') }}"> PHONES </a>
             <br>
             <a href="{{ url_for('bags')}}"> BAGS</a>
             <br>
             <a href="{{url_for('other')}}"> OTHER</a>
-            <a href="{{ url_for('bags')}}"> WALLETS</a>
             <br>
-            <a href="{{ url_for('bags')}}"> SUNGLASSES</a>
+            <a href="{{ url_for('wallets')}}"> WALLETS</a>
             <br>
-            <a href="{{ url_for('bags')}}"> BOOKS</a><a href="{{ url_for('bags')}}"> BAGS</a>
+            <a href="{{ url_for('sunglasses')}}"> SUNGLASSES</a>
             <br>
+            <a href="{{ url_for('books')}}"> BOOKS</a>
             <br>
-            <a href="{{ url_for('bags')}}"> KEYS</a>
+            <a href="{{ url_for('keys')}}"> KEYS</a>
             <br>
-            <a href="{{ url_for('bags')}}"> CLOTHS</a>
+            <a href="{{ url_for('clothes')}}"> CLOTHES</a>
             <br>
-            <a href="{{ url_for('bags')}}"> JEWELRY</a>
-
+            <a href="{{ url_for('jewerly')}}"> JEWELRY</a>
+        </div>
 
         </body>
     </html>

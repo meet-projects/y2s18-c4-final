@@ -42,7 +42,7 @@ def profile_page(username):
     if user is not None:
         return render_template('profile.html', user = user)
     else:
-        return redirect(url_for('slogin_page'))
+        return redirect(url_for('login_page'))
 
 @app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
@@ -61,10 +61,7 @@ def sign_up_page():
 def noor():
     if request.method == 'GET':
         return render_template("noor.html")
-@app.route('/thank_you', methods=['GET' ,'POST'])
-def thanks():
-    if request.method == 'GET':
-        return render_template("thank_you.html")
+
 
 
 @app.route('/categories')
@@ -90,6 +87,39 @@ def lostorfound():
 def other():
     otherposts = databases.query_by_category("other")
     return render_template("other.html" ,others = otherposts)
+@app.route('/thanyou')
+def thanku():
+    return render_template("thank_you.html")
+@app.route('/sunglasses')
+def sunglasses():
+    sunglassesposts = databases.query_by_category("sunglasses")
+    return render_template("other.html" ,sunglasses = sunglassesposts)
+
+@app.route('/wallets')
+def wallets():
+    walletsposts = databases.query_by_category("wallets")
+    return render_template("wallets.html",wallets = walletsposts)
+@app.route('/books')
+def books():
+    booksposts = databases.query_by_category("books")
+    return render_template("books.html" , books=booksposts)
+@app.route('/keys')
+def keys():
+    keysposts = databases.query_by_category('keys')
+    return render_template("keys.html", keys=keysposts)
+@app.route('/clothes')
+def clothes():
+    clothesposts = databases.query_by_category("clothes")
+    return render_template("clothes.html", clothes=clothesposts)
+@app.route('/jewerly')
+def jewerly():
+    jewerlyposts = databases.query_by_category("jewerly")
+    return render_template("jewerly.html", jewerly = jewerlyposts)
+    
+    
+
+    
+    
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
      if request.method == 'GET':
@@ -102,9 +132,10 @@ def makepost():
          username = request.form['username']
 
          databases.add_post(title,describe,category,username,contact)
+         return redirect(url_for('thanku'))
 
 
-         return redirect(url_for("profile_page", username = session['username']))
+         #return redirect(url_for("profile_page", username = session['username']))
 
 
     

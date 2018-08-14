@@ -1,12 +1,12 @@
 .logininfo { 
-    position: relative;
-    top: 200px;
-    left: 450px;
-    width: 150px;
-    height: 100%;
+    position: fixed;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     
   
 }
+
 
 .singup1 { 
     position: relative;
@@ -37,7 +37,8 @@ body{
 
     position: relative;
 	top: 7px;
-    left: 60px;
+    left: 25px;
+    font-size: 50px;
 
 }
 }
@@ -88,11 +89,20 @@ body{
 
 .profilecss{
 	position: relative;
-    top: 200px;
-    left: 500px;
+    top: 210px;
+    left: 520px;
     width: 150px;
     height: 100%;
     font-size: 1.6rem;
 
 }
-
+.ok{
+    position: relative;
+    top: 200px;
+    left: 450px;
+    width: 150px;
+    height: 100%;
+}
+.color{
+    color: brown;
+}
