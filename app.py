@@ -117,7 +117,7 @@ def clothes():
 @app.route('/jewerly')
 def jewerly():
     jewerlyposts = databases.query_by_category("jewerly")
-    return render_template("jewerly.html",jewerlyposts=jewerly)
+    return render_template("jewerly.html", jewerly = jewerlyposts)
     
     
 
