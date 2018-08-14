@@ -1,7 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
     <html>
         <body>
-            <h1> OTHER:</h1>
-
+            <h1> Others:</h1>
+            {% for i in others%}
+            	<h1>i.title</h1>
+            	<br>
+            	<p> i.description</p>
+            {% endfor %}
         </body>
     </html>
