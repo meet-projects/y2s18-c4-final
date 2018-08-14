@@ -42,7 +42,7 @@ def profile_page(username):
     if user is not None:
         return render_template('profile.html', user = user)
     else:
-        return redirect(url_for('login_page'))
+        return redirect(url_for('slogin_page'))
 
 @app.route('/signup', methods = ['GET' ,'POST'])
 def sign_up_page():
@@ -75,7 +75,7 @@ def categories():
 @app.route('/categories/phones')
 def phones():
     phoneposts = databases.query_by_category("phones")
-    return render_template("phones.html",phones =phoneposts )
+    return render_template("phones.html",phones = phoneposts )
 
 @app.route('/bags')
 def bags():
@@ -96,8 +96,10 @@ def makepost():
          describe = request.form['describe']
          category = request.form['category']
          title = request.form['title']
+         contact = request.form['contact_info']
+         username = request.form['username']
 
-         databases.add_post(title,describe,category)
+         databases.add_post(title,describe,category,username,contact)
 
 
          return redirect(url_for("profile_page", username = session['username']))
