@@ -6,4 +6,4 @@ import databases
 # print(databases.update_points(5, "a"))
 # print(databases.get_points("a"))
 databases.delete_all_users()
-# databases.delete_all_posts()
+databases.delete_all_posts()
