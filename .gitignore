@@ -1,5 +1,4 @@
 __pycache__/
 .vscode/
-*.db
 *.py[oac]
 .DS_Store
