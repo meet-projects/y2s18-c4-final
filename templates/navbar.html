@@ -17,7 +17,7 @@
        {% endblock %}
    </head>
 
-   <body>
+   <body class="bg">
        <!-- Stuff will go here later -->
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Found It</a>
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -39,11 +39,17 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/categories">Categories</a>
-                <a class="dropdown-item" href="/phones">Phones</a>
-                <a class="dropdown-item" href="/bags">Bags</a>
-                <a class="dropdown-item" href="/wallets">Wallets</a>
-                <a class="dropdown-item" href="/keys">Keys</a>
-                <a class="dropdown-item" href="/Jewellery">Jewellery</a>
+                <a class="dropdown-item" href="/categories/phones">Phones</a>
+                <a class="dropdown-item" href="/categories/bags">Bags</a>
+                <a class="dropdown-item" href="/categories/wallets">Wallets</a>
+                <a class="dropdown-item" href="/categories/keys">Keys</a>
+                <a class="dropdown-item" href="/categories/jewellery">Jewellery</a>
+                <a class="dropdown-item" href="/categories/other">Other</a>
+                <a class="dropdown-item" href="/categories/sunglasses">Sunglasses</a>
+                <a class="dropdown-item" href="/categories/clothes">Clothes</a>
+                <a class="dropdown-item" href="/categories/books">Books</a>
+
+
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/post">Post</a>
               </div>
@@ -68,3 +74,6 @@
        {% endblock %}
    </body>
 </html>
+
+<!-- 
+ -->

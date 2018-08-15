@@ -52,8 +52,6 @@ def sign_up_page():
         name = request.form['name']
         password = request.form['password']
         number = request.form['phonenum']
-
-        print("hthr")
         
         databases.add_user(name , password, 0 , number)
         return redirect(url_for("login_page"))
@@ -69,12 +67,12 @@ def categories():
     return render_template("categories.html")
 
 
-@app.route('/phones')
+@app.route('/categories/phones')
 def phones():
     phoneposts = databases.query_by_category("phones")
     return render_template("phones.html",phones = phoneposts )
 
-@app.route('/bags')
+@app.route('/categories/bags')
 def bags():
     bagsposts = databases.query_by_category("bags")
     return render_template("bags.html",bags =bagsposts)
@@ -83,38 +81,38 @@ def lostorfound():
     return render_template('noor.html')
 
 
-@app.route('/other')
+@app.route('/categories/other')
 def other():
     otherposts = databases.query_by_category("other")
     return render_template("other.html" ,others = otherposts)
-@app.route('/thanyou')
+@app.route('/thankyou')
 def thanku():
     return render_template("thank_you.html")
-@app.route('/sunglasses')
+@app.route('/categories/sunglasses')
 def sunglasses():
     sunglassesposts = databases.query_by_category("sunglases")
     return render_template("sunglasses.html" ,sunglasses = sunglassesposts)
 
-@app.route('/wallets')
+@app.route('/categories/wallets')
 def wallets():
     walletsposts = databases.query_by_category("wallets")
     return render_template("wallets.html",wallets = walletsposts)
-@app.route('/books')
+@app.route('/categories/books')
 def books():
     booksposts = databases.query_by_category("books")
     return render_template("books.html" , books=booksposts)
-@app.route('/keys')
+@app.route('/categories/keys')
 def keys():
     keysposts = databases.query_by_category('keys')
     return render_template("keys.html", keys=keysposts)
-@app.route('/clothes')
+@app.route('/categories/clothes')
 def clothes():
     clothesposts = databases.query_by_category("clothes")
     return render_template("clothes.html", clothes=clothesposts)
-@app.route('/jewerly')
-def jewerly():
-    jewerlyposts = databases.query_by_category("jewelry")
-    return render_template("jewerly.html", jewerly = jewerlyposts)
+@app.route('/categories/jewellery')
+def jewellery():
+    jewelleryposts = databases.query_by_category("jewellery")
+    return render_template("jewellery.html", jewellery = jewelleryposts)
     
     
 
