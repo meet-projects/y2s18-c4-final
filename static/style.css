@@ -96,7 +96,11 @@ body {
 .whit{
 	color:white;
 }
-
+.writingcolor{
+    color:#284B63;
+    position:relative;
+    left: 100px;
+}
 
 
 .profilecss{

@@ -71,6 +71,10 @@ def query_by_category(category):
 	session = session_factory()
 	return session.query(Post).filter_by(category = category).all()
 
+def query_by_username(username):
+	session = session_factory()
+	return session.query(Post).filter_by(username = username).all()
+
 def delete_duplicates():
 	session = session_factory()
 	names = []

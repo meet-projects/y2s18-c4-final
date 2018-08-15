@@ -83,7 +83,7 @@ def lostorfound():
 
 @app.route('/categories/other')
 def other():
-    otherposts = databases.query_by_category("other")
+    otherposts = databases.query_by_category("others")
     return render_template("other.html" ,others = otherposts)
 @app.route('/thankyou')
 def thanku():
@@ -113,10 +113,29 @@ def clothes():
 def jewellery():
     jewelleryposts = databases.query_by_category("jewellery")
     return render_template("jewellery.html", jewellery = jewelleryposts)
-    
-    
 
-    
+@app.route('/results', methods = ['POST'])
+def search():
+    txt = request.form["search"]
+    if not("-u" in txt and "-t" in txt):
+
+        if "-u" in txt:
+            temp_list = query_by_username(txt[:txt.find('-u')])
+            if temp_list is not None:
+                return render_template("post_results.html", list = temp_list)
+            return "No results for that user"
+
+        elif "-t" in txt:
+            temp_list = query_by_title(txt[:txt.find('-t')])
+            if temp_list is not None:
+                return render_template("post_results.html", list = temp_list)
+            return "No results for that title"
+        
+        temp_list = query_by_name(txt)
+        
+        if temp_list is not None:
+            return render_template("post_results.html", list = temp_list())
+        return "No results for this category"
     
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():

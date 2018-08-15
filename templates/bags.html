@@ -9,9 +9,9 @@
                 {% for i in bags%}
                     <br>    
                     <h1>{{i.title}}</h1>
-                    <p> {{i.description}}</p>
-                    <p>{{i.username}}</p>
-                    <p>{{i.contact}}</p>
+                    <p>description: {{i.description}}</p>
+                    <p>poster: <a href = "/profile/{{i.username}}">{{i.username}}</a></p> 
+                    <p>contact info: {{i.contact}}</p>
                     <br>
                 {% endfor %}
                 </div>
