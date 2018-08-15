@@ -114,15 +114,17 @@ def jewellery():
     jewelleryposts = databases.query_by_category("jewellery")
     return render_template("jewellery.html", jewellery = jewelleryposts)
 
- @app.route('/results', methods = ['POST'])
- def search():
+@app.route('/results', methods = ['POST'])
+def search():
     msg = request.form["search"]
     if "-u" in msg:
-        return render_template("results")
+        return render_template("results.html", list = query_by_username('s'))
+    if "-t" in msg:
+        return render_template("results.html", list = query_by_title('a'))
     temp_list = query_by_name(msg)
     if temp_list is not None:
 
-        return render_template()
+        return render_template("results.html")
 
     
 @app.route('/post' , methods=['GET' ,'POST'] )
