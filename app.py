@@ -116,16 +116,26 @@ def jewellery():
 
 @app.route('/results', methods = ['POST'])
 def search():
-    msg = request.form["search"]
-    if "-u" in msg:
-        return render_template("results.html", list = query_by_username('s'))
-    if "-t" in msg:
-        return render_template("results.html", list = query_by_title('a'))
-    temp_list = query_by_name(msg)
-    if temp_list is not None:
+    txt = request.form["search"]
+    if not("-u" in txt and "-t" in txt):
 
-        return render_template("results.html")
+        if "-u" in txt:
+            temp_list = query_by_username(txt[:txt.find('-u')])
+            if temp_list is not None:
+                return render_template("post_results.html", list = temp_list)
+            return "No results for that user"
 
+        elif "-t" in txt:
+            temp_list = query_by_title(txt[:txt.find('-t')])
+            if temp_list is not None:
+                return render_template("post_results.html", list = temp_list)
+            return "No results for that title"
+        
+        temp_list = query_by_name(txt)
+        
+        if temp_list is not None:
+            return render_template("post_results.html", list = temp_list())
+        return "No results for this category"
     
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():
