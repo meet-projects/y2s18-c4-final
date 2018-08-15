@@ -1,15 +1,25 @@
 <!doctype html>
     <html>
-        <body>
-            <h1> Phones</h1>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+        <body class="bg">
+            <div>
+           
+                <h1 class="whit"> Phones</h1>
             {% for i in phones%}
-            	<h1>{{i.title}}</h1>
-            	<br>
-            	<p> {{i.description}}</p>
-                <br>
-                <p>{{i.username}}</p>
-                <br>
-                <p>{{i.contact}}</p>
+          
+            	<h1 class="whit">{{i.title}}</h1>
+            	
+            	<p class="whit"> {{i.description}}</p>
+                
+                <p class="whit">{{i.username}}</p>
+             
+                <p class="whit">{{i.contact}}</p>
             {% endfor %}
+            </div>
+            <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+            <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
         </body>
     </html>

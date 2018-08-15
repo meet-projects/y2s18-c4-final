@@ -27,6 +27,16 @@
 
   }
 
+.phonepos { 
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 100%;
+    
+  
+}
+
 body{
 
 }
@@ -104,5 +114,8 @@ body{
     height: 100%;
 }
 .color{
-    color: brown;
+    color: red;
+}
+.pppp{
+    background-color: rgb(153, 153, 255);
 }
