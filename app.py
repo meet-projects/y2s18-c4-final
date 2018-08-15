@@ -69,7 +69,7 @@ def categories():
     return render_template("categories.html")
 
 
-@app.route('/categories/phones')
+@app.route('/phones')
 def phones():
     phoneposts = databases.query_by_category("phones")
     return render_template("phones.html",phones = phoneposts )
@@ -133,7 +133,7 @@ def makepost():
 
          databases.add_post(title,describe,category,username,contact)
          userpoints = databases.get_points(name = username)
-         databases.update_points(amount = userpoints , name = username)
+         databases.update_points(amount = 10, name = username)
          
          return redirect(url_for('thanku'))
 
