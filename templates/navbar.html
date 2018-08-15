@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>Bootstrap Tutorial</title>
 
        <!-- Required tags to make the website responsive-->
        <meta charset="utf-8">
@@ -58,7 +57,7 @@
               <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0" method = "post" action = "{{ url_for('search') }}">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>

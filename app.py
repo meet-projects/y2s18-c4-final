@@ -83,7 +83,7 @@ def lostorfound():
 
 @app.route('/categories/other')
 def other():
-    otherposts = databases.query_by_category("other")
+    otherposts = databases.query_by_category("others")
     return render_template("other.html" ,others = otherposts)
 @app.route('/thankyou')
 def thanku():
@@ -113,10 +113,17 @@ def clothes():
 def jewellery():
     jewelleryposts = databases.query_by_category("jewellery")
     return render_template("jewellery.html", jewellery = jewelleryposts)
-    
-    
 
-    
+ @app.route('/results', methods = ['POST'])
+ def search():
+    msg = request.form["search"]
+    if "-u" in msg:
+        return render_template("results")
+    temp_list = query_by_name(msg)
+    if temp_list is not None:
+
+        return render_template()
+
     
 @app.route('/post' , methods=['GET' ,'POST'] )
 def makepost():

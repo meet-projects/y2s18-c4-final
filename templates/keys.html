@@ -8,11 +8,11 @@
             {% for i in keys%}
                 <h1 class="whit">{{i.title}}</h1>
             
-                <p class="whit"> {{i.description}}</p>
-              
-                <p class="whit">{{i.username}}</p>
-               
-                <p class="whit">{{i.contact}}</p>
+                <p class="whit"> description: {{i.description}}</p>
+                
+                <p class="whit">poster: <a class="whit" href = "/profile/{{i.username}}">{{i.username}}</a></p> 
+          
+                <p class="whit">contact info: {{i.contact}}</p>
             {% endfor %}
             </div>
         {% endblock %}
