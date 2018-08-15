@@ -1,11 +1,9 @@
-<!doctype html>
-    <html>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
-        <body class="bg">
-            <div>
+{% extends "navbar.html" %}
+
+        {% block head %}
+        {% endblock %}
+        {% block body %}
+            <div class="pppp">
            
                 <h1 class="whit"> Phones</h1>
             {% for i in phones%}
@@ -19,7 +17,5 @@
                 <p class="whit">{{i.contact}}</p>
             {% endfor %}
             </div>
-            <script src="{{ url_for('static', filename='jquery.js') }}"></script>
-            <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
-        </body>
-    </html>
+        {% endblock %}
+        

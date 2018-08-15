@@ -1,15 +1,20 @@
-<!doctype html>
-    <html>
-        <body>
-            <h1> jewerly</h1>
+{% extends "navbar.html" %}
+
+        {% block head %}
+        {% endblock %}
+        {% block body %}
+            <div class="pppp">
+           
+            <h1  class="whit"> jewerly</h1>
             {% for i in jewerly%}
-            	<h1>{{i.title}}</h1>
-            	<br>
-            	<p> {{i.description}}</p>
-                <br>
-                <p>{{i.username}}</p>
-                <br>
-                <p>{{i.contact}}</p>
+                <h1 class="whit">{{i.title}}</h1>
+                
+                <p class="whit"> {{i.description}}</p>
+               
+                <p  class="whit">{{i.username}}</p>
+         
+                <p  class="whit">{{i.contact}}</p>
             {% endfor %}
-        </body>
-    </html>
+            </div>
+        {% endblock %}
+        

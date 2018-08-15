@@ -41,6 +41,16 @@ def query_by_name(name):
 
 	return session.query(User).filter_by(name = name).first()
 
+def get_points(name):
+
+	return query_by_name(name).points
+
+def update_points(amount, name):
+	
+	usr = query_by_name(name)
+	usr.points += amount
+	session.commit()
+
 def query_by_title(title):
 
 	return session.query(Post).filter_by(title = title).all()

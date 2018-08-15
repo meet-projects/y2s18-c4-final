@@ -1,15 +1,16 @@
 <!DOCTYPE html>
     <html>
-        <body>
-            <h1> Others:</h1>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <body class="pppp">
+            <h1 class="whit"> Others:</h1>
             {% for i in others%}
-            	<h1>{{i.title}}</h1>
-            	<br>
-            	<p> {{i.description}}</p>
-                <br>
-                <p>{{i.username}}</p>
-                <br>
-                <p>{{i.contact}}</p>
+            	<h1 class="whit">{{i.title}}</h1>
+            
+            	<p class="whit"> {{i.description}}</p>
+                
+                <p class="whit">{{i.username}}</p>
+          
+                <p class="whit">{{i.contact}}</p>
             {% endfor %}
         </body>
     </html>
