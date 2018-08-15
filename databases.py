@@ -64,7 +64,7 @@ def delete_all_users():
 
 def delete_all_posts():
 	session = session_factory()
-	session.query(Posts).delete()
+	session.query(Post).delete()
 	session.commit()
 
 def query_by_category(category):
@@ -96,4 +96,3 @@ def delete_duplicates():
 
 			#delete_article_by_name(i)
 	session.commit()
-add_user("name", "password", 0, "phone_number")
