@@ -60,7 +60,8 @@ body{
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);}
+    transform: translate(-50%, -50%);
+    border-radius: 10px;}
 
 .thanks{
     position: fixed;
@@ -124,5 +125,5 @@ body{
     line-height: 1.5 !important;
     font-size: 100% !important;
     padding: 6px 30px !important;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
