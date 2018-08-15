@@ -1,20 +1,18 @@
-{% extends "navbar.html" %}
-
-        {% block head %}
-        {% endblock %}
-        {% block body %}
-            <div class="pppp">
-           
+<!doctype html>
+    <html>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <body class="pppp">
+            <div >
             <h1  class="whit"> jewerly</h1>
             {% for i in jewerly%}
-                <h1 class="whit">{{i.title}}</h1>
-                
-                <p class="whit"> {{i.description}}</p>
+            	<h1 class="whit">{{i.title}}</h1>
+            	
+            	<p class="whit"> {{i.description}}</p>
                
                 <p  class="whit">{{i.username}}</p>
          
                 <p  class="whit">{{i.contact}}</p>
             {% endfor %}
             </div>
-        {% endblock %}
-        
+        </body>
+    </html>
