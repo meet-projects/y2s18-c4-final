@@ -132,7 +132,12 @@ def makepost():
          username = request.form['username']
 
          databases.add_post(title,describe,category,username,contact)
+         userpoints = databases.get_points(name = username)
+         databases.update_points(amount = userpoints , name = username)
+         
          return redirect(url_for('thanku'))
+
+
 
 
          #return redirect(url_for("profile_page", username = session['username']))

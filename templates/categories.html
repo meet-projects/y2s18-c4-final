@@ -1,29 +1,45 @@
 <!doctype html>
     <html>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
     <head>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
         <body class="bg">
-            <h1> CATEGORIES:</h1>
+            <br>
+            <h1 class="font-weight-bold whit"> CATEGORIES:</h1>
         <div>
-            <a href="{{ url_for('phones') }}"> PHONES </a>
             <br>
-            <a href="{{ url_for('bags')}}"> BAGS</a>
             <br>
-            <a href="{{url_for('other')}}"> OTHER</a>
+            <a href="{{ url_for('phones') }}" class="badg badge-light"> PHONES </a>
             <br>
-            <a href="{{ url_for('wallets')}}"> WALLETS</a>
             <br>
-            <a href="{{ url_for('sunglasses')}}"> SUNGLASSES</a>
+            <a href="{{ url_for('bags')}}" class="badg badge-light"> BAGS</a>
             <br>
-            <a href="{{ url_for('books')}}"> BOOKS</a>
             <br>
-            <a href="{{ url_for('keys')}}"> KEYS</a>
+            <a href="{{url_for('other')}}" class="badg badge-light"> OTHER</a>
             <br>
-            <a href="{{ url_for('clothes')}}"> CLOTHES</a>
             <br>
-            <a href="{{ url_for('jewerly')}}"> JEWELRY</a>
+            <a href="{{ url_for('wallets')}}" class="badg badge-light"> WALLETS</a>
+            <br>
+            <br>
+            <a href="{{ url_for('sunglasses')}}" class="badg badge-light"> SUNGLASSES</a>
+            <br>
+            <br>
+            <a href="{{ url_for('books')}}" class="badg badge-light"> BOOKS</a>
+            <br>
+            <br>
+            <a href="{{ url_for('keys')}}" class="badg badge-light"> KEYS</a>
+            <br>
+            <br>
+            <a href="{{ url_for('clothes')}}" class="badg badge-light"> CLOTHES</a>
+            <br>
+            <br>
+            <a href="{{ url_for('jewerly')}}" class="badg badge-light"> JEWELRY</a>
         </div>
+            <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+            <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
         </body>
     </html>
