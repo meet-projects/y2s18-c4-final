@@ -137,17 +137,6 @@ def makepost():
          
          return redirect(url_for('thanku'))
 
-
-
-
-         #return redirect(url_for("profile_page", username = session['username']))
-
-
-    
-
-# @app.route('/search', methods['GET', 'POST'])
-# def search():
-
-    
+  
 if __name__ == "__main__":
     app.run(debug=True)
