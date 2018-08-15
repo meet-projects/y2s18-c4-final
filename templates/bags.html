@@ -1,19 +1,28 @@
-<!doctype html>
-    <html>
-        <head>
-            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-        </head>
-        <body class="pppp">
-            <div class="whit">
-            <h1> BAGS</h1>
-            {% for i in bags%}
-                <br>    
-                <h1>{{i.title}}</h1>
-            	<p> {{i.description}}</p>
-                <p>{{i.username}}</p>
-                <p>{{i.contact}}</p>
-                <br>
-            {% endfor %}
+{% extends "navbar.html" %}
+    <!--<html>-->
+        {% block head %}
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+        <!-- <meta charset="utf-8"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}"> -->
+        {% endblock %}
+        <!--<body>-->
+        {% block body %}
+            <div class="pppp">
+               <div class="whit">
+                <h1> BAGS</h1>
+                {% for i in bags%}
+                    <br>    
+                    <h1>{{i.title}}</h1>
+                    <p> {{i.description}}</p>
+                    <p>{{i.username}}</p>
+                    <p>{{i.contact}}</p>
+                    <br>
+                {% endfor %}
+                </div>
             </div>
-        </body>
-    </html>
+            <!-- <script src="{{ url_for('static', filename='jquery.js') }}"></script> -->
+            <!-- <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script> -->
+        {% endblock %}
+        <!--</body>-->
+
