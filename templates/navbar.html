@@ -12,12 +12,15 @@
 
        <!-- My custom styles -->
        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+       {% block head %}
+
+       {% endblock %}
    </head>
 
    <body>
        <!-- Stuff will go here later -->
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Found It</a>
+        <a class="navbar-brand" href="/">Found It</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -35,13 +38,14 @@
                 Options
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Phones</a>
-                <a class="dropdown-item" href="#">Bags</a>
-                <a class="dropdown-item" href="#">Wallets</a>
-                <a class="dropdown-item" href="#">Keys</a>
-                <a class="dropdown-item" href="#">Jewellery</a>
+                <a class="dropdown-item" href="/categories">Categories</a>
+                <a class="dropdown-item" href="/categories/phones">Phones</a>
+                <a class="dropdown-item" href="/categories/bags">Bags</a>
+                <a class="dropdown-item" href="/categories/wallets">Wallets</a>
+                <a class="dropdown-item" href="/categories/keys">Keys</a>
+                <a class="dropdown-item" href="/categories/Jewellery">Jewellery</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Post</a>
+                <a class="dropdown-item" href="/post">Post</a>
               </div>
             </li>
             <li class="nav-item">
@@ -59,5 +63,8 @@
        <!-- JQuery MUST BE BEFORE BOOTSTRAP -->
        <script src="{{ url_for('static', filename='jquery.js') }}"></script>
        <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+       {% block body %}
+
+       {% endblock %}
    </body>
 </html>
