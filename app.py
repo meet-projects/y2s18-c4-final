@@ -92,8 +92,8 @@ def thanku():
     return render_template("thank_you.html")
 @app.route('/sunglasses')
 def sunglasses():
-    sunglassesposts = databases.query_by_category("sunglasses")
-    return render_template("other.html" ,sunglasses = sunglassesposts)
+    sunglassesposts = databases.query_by_category("sunglases")
+    return render_template("sunglasses.html" ,sunglasses = sunglassesposts)
 
 @app.route('/wallets')
 def wallets():
@@ -113,7 +113,7 @@ def clothes():
     return render_template("clothes.html", clothes=clothesposts)
 @app.route('/jewerly')
 def jewerly():
-    jewerlyposts = databases.query_by_category("jewerly")
+    jewerlyposts = databases.query_by_category("jewelry")
     return render_template("jewerly.html", jewerly = jewerlyposts)
     
     
